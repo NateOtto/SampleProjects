@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+<script>
+	const request = new XMLHttpRequest();
+	const url='http://public-api.wordpress.com/wpcom/v2/work-with-us';
+	request.open("GET", url);
+	request.setRequestHeader("x-future", 'automattician');
+	request.send();
+	request.onreadystatechange = (e) => {
+		request.log(request.responseText);
+	}
+</script>
+</body>
+</html>
